@@ -80,7 +80,7 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
             >
               <div className="flex flex-col items-center justify-center w-full mt-1">
                 <span className="font-sans text-[#A88B5E] text-[8px] sm:text-[10px] tracking-[0.3em] uppercase opacity-80 text-center mb-4 sm:mb-6 px-1 leading-loose">
-                  Tenemos el honor de invitarte <br/> a celebrar la boda de
+                  Tenemos el honor de invitarte <br/> a celebrar nuestra boda
                 </span>
 
                 <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#2F3E46] mb-3 sm:mb-5 text-center leading-[1.2]">

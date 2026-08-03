@@ -53,19 +53,19 @@
     ]
   },
   "ceremony": {
-    "type": "Religiosa",
-    "locationName": "Parroquia de San Miguel",
-    "address": "Calle Principal #123, Centro Histórico",
+    "type": "Ceremonia",
+    "locationName": "Quinta Santa Isabel Uman",
+    "address": "Ver ubicación en el mapa",
     "time": "18:00 hrs",
-    "googleMapsUrl": "https://maps.google.com/...",
-    "coordinates": { "lat": 19.432608, "lng": -99.133209 }
+    "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
+    "coordinates": { "lat": 20.88, "lng": -89.74 }
   },
   "reception": {
-    "locationName": "Hacienda Los Arcángeles",
-    "address": "Kilómetro 4.5, Carretera al Sur",
+    "locationName": "Quinta Santa Isabel Uman",
+    "address": "Ver ubicación en el mapa",
     "time": "20:30 hrs",
-    "googleMapsUrl": "https://maps.google.com/...",
-    "coordinates": { "lat": 19.432608, "lng": -99.133209 }
+    "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
+    "coordinates": { "lat": 20.88, "lng": -89.74 }
   },
   "schedule": [
     { "time": "18:00", "event": "Ceremonia", "icon": "church" },
