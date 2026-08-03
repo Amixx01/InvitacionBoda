@@ -13,9 +13,9 @@
     "hashtag": "#RichardYMayte"
   },
   "event": {
-    "date": "2026-08-29",
-    "time": "17:00",
-    "countdownDate": "2026-08-29T17:00:00.000Z",
+    "date": "2026-08-28",
+    "time": "20:00",
+    "countdownDate": "2026-08-28T20:00:00.000Z",
     "timezone": "America/Mexico_City"
   },
   "story": {
@@ -23,12 +23,10 @@
     "description": "Una mirada, un café, y la vida cambió para siempre. Hoy queremos compartir el siguiente capítulo con las personas que más amamos.",
     "milestones": [
       {
-        "date": "2020",
         "title": "El Inicio",
         "photo": "/assets/images/gallery/story-1.jpg"
       },
       {
-        "date": "2023",
         "title": "El Compromiso",
         "photo": "/assets/images/gallery/story-2.jpg"
       }
@@ -48,30 +46,64 @@
   "godparents": {
     "title": "Y nuestros padrinos",
     "list": [
-      { "role": "Velación", "names": ["Fernando Torres", "Laura Díaz"] },
-      { "role": "Anillos", "names": ["Javier López", "Sofía Marín"] }
+      {
+        "role": "Velación",
+        "names": [
+          "Fernando Torres",
+          "Laura Díaz"
+        ]
+      },
+      {
+        "role": "Anillos",
+        "names": [
+          "Javier López",
+          "Sofía Marín"
+        ]
+      }
     ]
   },
   "ceremony": {
     "type": "Ceremonia",
     "locationName": "Quinta Santa Isabel Uman",
     "address": "Ver ubicación en el mapa",
-    "time": "18:00 hrs",
+    "time": "20:00 hrs",
     "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
-    "coordinates": { "lat": 20.88, "lng": -89.74 }
+    "coordinates": {
+      "lat": 20.88,
+      "lng": -89.74
+    }
   },
   "reception": {
     "locationName": "Quinta Santa Isabel Uman",
     "address": "Ver ubicación en el mapa",
     "time": "20:30 hrs",
     "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
-    "coordinates": { "lat": 20.88, "lng": -89.74 }
+    "coordinates": {
+      "lat": 20.88,
+      "lng": -89.74
+    }
   },
   "schedule": [
-    { "time": "18:00", "event": "Ceremonia", "icon": "church" },
-    { "time": "19:30", "event": "Cóctel de Bienvenida", "icon": "cocktail" },
-    { "time": "20:30", "event": "Cena", "icon": "dinner" },
-    { "time": "22:00", "event": "Fiesta", "icon": "party" }
+    {
+      "time": "18:00",
+      "event": "Ceremonia",
+      "icon": "church"
+    },
+    {
+      "time": "19:30",
+      "event": "Cóctel de Bienvenida",
+      "icon": "cocktail"
+    },
+    {
+      "time": "20:30",
+      "event": "Cena",
+      "icon": "dinner"
+    },
+    {
+      "time": "22:00",
+      "event": "Fiesta",
+      "icon": "party"
+    }
   ],
   "dressCode": {
     "type": "Formal / Cóctel Elegante",
@@ -102,7 +134,7 @@
     "bankContent": {
       "bankName": "BBVA",
       "accountName": "Richard y Mayte",
-      "clabe": "012345678912345678"
+      "clabe": "722969020294291765"
     }
   },
   "rsvp": {
@@ -116,7 +148,7 @@
     "outro": "Gracias por ser parte de nuestro viaje."
   },
   "footer": {
-    "signature": "Con amor, Ale & Val",
-    "credits": "Made by Antigravity Studio"
+    "signature": "Con amor, Richard & Mayte",
+    "credits": "Made by angiloria"
   }
 }
