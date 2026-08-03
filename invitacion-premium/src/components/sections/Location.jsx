@@ -40,7 +40,6 @@ const Location = () => {
       
       <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-12 w-full px-4">
         <EventCard event={data.ceremony} index={0} />
-        <EventCard event={data.reception} index={1} />
       </div>
     </section>
   );
