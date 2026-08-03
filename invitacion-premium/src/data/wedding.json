@@ -1,0 +1,122 @@
+{
+  "couple": {
+    "groom": {
+      "name": "Richard",
+      "shortName": "Richard",
+      "instagram": "@richard.dev"
+    },
+    "bride": {
+      "name": "Mayte",
+      "shortName": "Mayte",
+      "instagram": "@mayte.design"
+    },
+    "hashtag": "#RichardYMayte"
+  },
+  "event": {
+    "date": "2026-08-29",
+    "time": "17:00",
+    "countdownDate": "2026-08-29T17:00:00.000Z",
+    "timezone": "America/Mexico_City"
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "description": "Una mirada, un café, y la vida cambió para siempre. Hoy queremos compartir el siguiente capítulo con las personas que más amamos.",
+    "milestones": [
+      {
+        "date": "2020",
+        "title": "El Inicio",
+        "photo": "/assets/images/gallery/story-1.jpg"
+      },
+      {
+        "date": "2023",
+        "title": "El Compromiso",
+        "photo": "/assets/images/gallery/story-2.jpg"
+      }
+    ]
+  },
+  "parents": {
+    "title": "Con la bendición de nuestros padres",
+    "groomParents": [
+      "Roberto Hernández",
+      "Marta Pérez"
+    ],
+    "brideParents": [
+      "Carlos Ruiz",
+      "Elena Sánchez"
+    ]
+  },
+  "godparents": {
+    "title": "Y nuestros padrinos",
+    "list": [
+      { "role": "Velación", "names": ["Fernando Torres", "Laura Díaz"] },
+      { "role": "Anillos", "names": ["Javier López", "Sofía Marín"] }
+    ]
+  },
+  "ceremony": {
+    "type": "Religiosa",
+    "locationName": "Parroquia de San Miguel",
+    "address": "Calle Principal #123, Centro Histórico",
+    "time": "18:00 hrs",
+    "googleMapsUrl": "https://maps.google.com/...",
+    "coordinates": { "lat": 19.432608, "lng": -99.133209 }
+  },
+  "reception": {
+    "locationName": "Hacienda Los Arcángeles",
+    "address": "Kilómetro 4.5, Carretera al Sur",
+    "time": "20:30 hrs",
+    "googleMapsUrl": "https://maps.google.com/...",
+    "coordinates": { "lat": 19.432608, "lng": -99.133209 }
+  },
+  "schedule": [
+    { "time": "18:00", "event": "Ceremonia", "icon": "church" },
+    { "time": "19:30", "event": "Cóctel de Bienvenida", "icon": "cocktail" },
+    { "time": "20:30", "event": "Cena", "icon": "dinner" },
+    { "time": "22:00", "event": "Fiesta", "icon": "party" }
+  ],
+  "dressCode": {
+    "type": "Etiqueta Rigurosa / Black Tie",
+    "description": "Por favor, reserva el uso de color blanco y tonos pastel exclusivamente para la novia.",
+    "colorPalette": ["#1C2A39", "#E6D5B8", "#1E4237", "#4A001F"]
+  },
+  "music": {
+    "url": "/assets/audio/background-song.mp3",
+    "title": "Yellow - Cello Cover",
+    "autoPlay": false
+  },
+  "gallery": [
+    "/assets/images/gallery/pic1.jpg",
+    "/assets/images/gallery/pic2.jpg",
+    "/assets/images/gallery/pic3.jpg",
+    "/assets/images/gallery/pic4.jpg"
+  ],
+  "gifts": {
+    "title": "Mesa de Regalos",
+    "message": "Nuestra vida entera ya es un regalo, pero si deseas tener un detalle con nosotros:",
+    "stores": [
+      {
+        "name": "Wishbob",
+        "eventNumber": "",
+        "url": "https://www.wishbob.com/yzqmconbjl"
+      }
+    ],
+    "bankContent": {
+      "bankName": "BBVA",
+      "accountName": "Richard y Mayte",
+      "clabe": "012345678912345678"
+    }
+  },
+  "rsvp": {
+    "deadline": "2026-08-15",
+    "formEndpoint": "https://forms.google.com/...",
+    "contactPhone": "+521234567890",
+    "message": "Nos haría muy felices contar con tu presencia."
+  },
+  "messages": {
+    "intro": "Hay momentos en la vida que son especiales por sí solos, pero compartirlos con las personas que quieres los hace inolvidables.",
+    "outro": "Gracias por ser parte de nuestro viaje."
+  },
+  "footer": {
+    "signature": "Con amor, Ale & Val",
+    "credits": "Made by Antigravity Studio"
+  }
+}
