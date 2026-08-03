@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense, lazy } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Envelope from './components/sections/Envelope'
-import Hero from './components/sections/Hero'
-import Countdown from './components/sections/Countdown'
-import Story from './components/sections/Story'
-import Location from './components/sections/Location'
-import Schedule from './components/sections/Schedule'
-import Gallery from './components/sections/Gallery'
-import DressCode from './components/sections/DressCode'
-import GiftTable from './components/sections/GiftTable'
-import RSVP from './components/sections/RSVP'
-import Footer from './components/common/Footer'
 import { AudioPlayerProvider } from './context/AudioPlayerContext'
 import MusicPlayer from './components/ui/MusicPlayer'
+
+// Secciones con Lazy Loading (carga diferida)
+const Hero = lazy(() => import('./components/sections/Hero'))
+const Countdown = lazy(() => import('./components/sections/Countdown'))
+const Story = lazy(() => import('./components/sections/Story'))
+const Location = lazy(() => import('./components/sections/Location'))
+const Schedule = lazy(() => import('./components/sections/Schedule'))
+const Gallery = lazy(() => import('./components/sections/Gallery'))
+const DressCode = lazy(() => import('./components/sections/DressCode'))
+const GiftTable = lazy(() => import('./components/sections/GiftTable'))
+const RSVP = lazy(() => import('./components/sections/RSVP'))
+const Footer = lazy(() => import('./components/common/Footer'))
 
 function App() {
   const [showIntro, setShowIntro] = useState(true)
@@ -46,16 +48,22 @@ function App() {
         animate={{ opacity: showIntro ? 0 : 1 }}
         transition={{ delay: 1, duration: 1.5 }}
       >
-        <Hero />
-        <Countdown />
-        <Story />
-        <Location />
-        <Schedule />
-        <Gallery />
-        <DressCode />
-        <GiftTable />
-        <RSVP />
-        <Footer />
+        <Suspense fallback={
+          <div className="h-screen w-full flex items-center justify-center bg-[#FAF9F6]">
+            <div className="w-10 h-10 border-4 border-[#A88B5E]/30 border-t-[#A88B5E] rounded-full animate-spin"></div>
+          </div>
+        }>
+          <Hero />
+          <Countdown />
+          <Story />
+          <Location />
+          <Schedule />
+          <Gallery />
+          <DressCode />
+          <GiftTable />
+          <RSVP />
+          <Footer />
+        </Suspense>
       </motion.div>
 
       </div>
