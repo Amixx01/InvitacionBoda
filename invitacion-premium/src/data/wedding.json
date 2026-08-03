@@ -74,9 +74,9 @@
     { "time": "22:00", "event": "Fiesta", "icon": "party" }
   ],
   "dressCode": {
-    "type": "Etiqueta Rigurosa / Black Tie",
-    "description": "Por favor, reserva el uso de color blanco y tonos pastel exclusivamente para la novia.",
-    "colorPalette": ["#1C2A39", "#E6D5B8", "#1E4237", "#4A001F"]
+    "type": "Formal / Cóctel Elegante",
+    "description": "Por favor, reserva el uso de color blanco exclusivamente para la novia.",
+    "colorPalette": []
   },
   "music": {
     "url": "/assets/audio/background-song.mp3",

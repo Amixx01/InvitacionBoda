@@ -15,18 +15,20 @@ const DressCode = () => {
         <span className="font-sans text-[#A88B5E] text-xs uppercase tracking-[0.4em] mb-6">Dress Code</span>
         <h2 className="font-serif text-4xl sm:text-5xl mb-8">{data.dressCode.type}</h2>
         
-        <div className="flex space-x-4 mb-8">
-          {data.dressCode.colorPalette.map((color, idx) => (
-            <motion.div 
-               key={idx}
-               initial={{ opacity: 0, y: 10 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ delay: idx * 0.15 + 0.5 }}
-               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/20 shadow-lg"
-               style={{ backgroundColor: color }}
-            />
-          ))}
-        </div>
+        {data.dressCode.colorPalette && data.dressCode.colorPalette.length > 0 && (
+          <div className="flex space-x-4 mb-8">
+            {data.dressCode.colorPalette.map((color, idx) => (
+              <motion.div 
+                 key={idx}
+                 initial={{ opacity: 0, y: 10 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ delay: idx * 0.15 + 0.5 }}
+                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/20 shadow-lg"
+                 style={{ backgroundColor: color }}
+              />
+            ))}
+          </div>
+        )}
         
         <p className="font-serif text-white/70 text-sm sm:text-base leading-relaxed max-w-md italic">
           "{data.dressCode.description}"
