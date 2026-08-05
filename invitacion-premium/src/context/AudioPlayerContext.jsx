@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect, useRef } from 'react';
 import data from '../data/wedding.json';
-import violinCover from '../assets/audio/violin-cover.mp3';
 
 export const AudioPlayerContext = createContext();
 
@@ -9,8 +8,8 @@ export const AudioPlayerProvider = ({ children }) => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    // Usar directamente el archivo que subiste al proyecto
-    const audioUrl = violinCover;
+    // Usar directamente el archivo que esta en el JSON
+    const audioUrl = data.music.url;
     audioRef.current = new Audio(audioUrl);
     audioRef.current.loop = true;
     audioRef.current.volume = 0.4;
