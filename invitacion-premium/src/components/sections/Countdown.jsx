@@ -5,8 +5,8 @@ import data from '../../data/wedding.json';
 
 const AnimatedNumber = ({ value, label }) => {
   return (
-    <div className="flex flex-col items-center mx-2 sm:mx-6">
-      <div className="relative overflow-hidden h-[3rem] sm:h-[4.5rem] w-[3rem] sm:w-[4.5rem] flex items-center justify-center">
+    <div className="flex flex-col items-center mx-1 sm:mx-6">
+      <div className="relative overflow-hidden h-[2.8rem] sm:h-[4.5rem] w-[2.8rem] sm:w-[4.5rem] flex items-center justify-center">
         <AnimatePresence mode="popLayout">
           <motion.span
             key={value}
@@ -14,13 +14,13 @@ const AnimatedNumber = ({ value, label }) => {
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: -20, opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute font-serif text-4xl sm:text-6xl text-[#2F3E46] font-light"
+            className="absolute font-serif text-3xl sm:text-6xl text-[#2F3E46] font-light"
           >
             {value.toString().padStart(2, '0')}
           </motion.span>
         </AnimatePresence>
       </div>
-      <p className="font-serif text-[#A88B5E] text-[9px] sm:text-[11px] uppercase tracking-[0.3em] mt-2 sm:mt-4">
+      <p className="font-serif text-[#A88B5E] text-[8px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.3em] mt-2 sm:mt-4">
         {label}
       </p>
     </div>
