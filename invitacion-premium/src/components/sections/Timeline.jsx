@@ -28,6 +28,13 @@ const MilestoneItem = ({ milestone, index }) => {
          className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] bg-white/50 backdrop-blur-md shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] overflow-hidden border border-white/60 p-2 rounded-xl"
       >
         <div className="w-full h-full bg-[#DCD5C6] relative overflow-hidden rounded-lg">
+           {milestone.photo && (
+             <img 
+               src={milestone.photo} 
+               alt={milestone.title} 
+               className="w-full h-full object-cover"
+             />
+           )}
            <div className="absolute inset-0 bg-gradient-to-tr from-[#A88B5E]/20 via-transparent to-white/30 mix-blend-multiply" />
         </div>
       </motion.div>
