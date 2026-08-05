@@ -30,9 +30,9 @@ const Schedule = () => {
             
             <div className="absolute left-[20px] sm:left-1/2 w-3 h-3 bg-[#A88B5E] rounded-full -translate-x-1/2 ring-4 ring-[#EAE5D9]"></div>
             
-            <div className={`w-full pl-12 sm:pl-0 sm:w-1/2 flex flex-col ${index % 2 === 0 ? 'sm:text-left sm:pr-12' : 'sm:text-right sm:pl-12'}`}>
+            <div className={`w-full pl-14 sm:pl-0 sm:w-1/2 flex flex-col ${index % 2 === 0 ? 'sm:text-left sm:pr-12' : 'sm:text-right sm:pl-12'}`}>
                <span className="font-sans text-[#A88B5E] tracking-[0.2em] text-xs uppercase mb-1">{item.time}</span>
-               <h4 className="font-serif text-xl sm:text-2xl text-[#2F3E46]">{item.event}</h4>
+               <h4 className="font-serif text-lg sm:text-2xl text-[#2F3E46]">{item.event}</h4>
             </div>
           </motion.div>
         ))}

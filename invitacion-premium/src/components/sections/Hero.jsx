@@ -57,9 +57,9 @@ const Hero = () => {
         </motion.p>
 
         {/* Nombres con máxima legibilidad y jerarquía (Mucho espacio en blanco) */}
-        <motion.h1 variants={itemVariants} className="font-serif text-5xl sm:text-7xl md:text-[7rem] text-[#2F3E46] font-extralight tracking-tight leading-tight mb-8 sm:mb-12 flex flex-col items-center gap-1 sm:gap-4">
+        <motion.h1 variants={itemVariants} className="font-serif text-4xl sm:text-7xl md:text-[7rem] text-[#2F3E46] font-extralight tracking-tight leading-tight mb-8 sm:mb-12 flex flex-col items-center gap-1 sm:gap-4">
           <span>{groom.name}</span>
-          <span className="text-3xl sm:text-5xl md:text-6xl italic text-[#A88B5E] font-serif">&</span>
+          <span className="text-2xl sm:text-5xl md:text-6xl italic text-[#A88B5E] font-serif">&</span>
           <span>{bride.name}</span>
         </motion.h1>
 

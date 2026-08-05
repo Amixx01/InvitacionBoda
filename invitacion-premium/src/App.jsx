@@ -1,5 +1,7 @@
 import React, { useState, Suspense, lazy } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Routes, Route } from 'react-router-dom'
+import { GuestProvider } from './context/GuestContext'
 import Envelope from './components/sections/Envelope'
 import { AudioPlayerProvider } from './context/AudioPlayerContext'
 import MusicPlayer from './components/ui/MusicPlayer'
@@ -15,7 +17,7 @@ const GiftTable = lazy(() => import('./components/sections/GiftTable'))
 const RSVP = lazy(() => import('./components/sections/RSVP'))
 const Footer = lazy(() => import('./components/common/Footer'))
 
-function App() {
+function WeddingApp() {
   const [showIntro, setShowIntro] = useState(true)
 
   return (
@@ -66,6 +68,18 @@ function App() {
 
       </div>
     </AudioPlayerProvider>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/:invitadoId?" element={
+        <GuestProvider>
+          <WeddingApp />
+        </GuestProvider>
+      } />
+    </Routes>
   )
 }
 
