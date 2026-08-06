@@ -83,28 +83,12 @@
       "lng": -89.74
     }
   },
-  "schedule": [
-    {
-      "time": "18:00",
-      "event": "Ceremonia",
-      "icon": "church"
-    },
-    {
-      "time": "19:30",
-      "event": "Cóctel de Bienvenida",
-      "icon": "cocktail"
-    },
-    {
-      "time": "20:30",
-      "event": "Cena",
-      "icon": "dinner"
-    },
-    {
-      "time": "22:00",
-      "event": "Fiesta",
-      "icon": "party"
-    }
-  ],
+  "sharedAlbum": {
+    "title": "Comparte tus recuerdos",
+    "description": "Una boda se vive mejor a través de los ojos de quienes amamos. Sube las fotos y videos que tomes hoy a nuestro álbum interactivo.",
+    "buttonText": "Subir Fotos al Álbum",
+    "url": "https://photos.google.com/share/..."
+  },
   "dressCode": {
     "type": "Formal / Cóctel Elegante",
     "description": "Por favor, reserva el uso de color blanco exclusivamente para la novia.",
