@@ -57,11 +57,18 @@ const Hero = () => {
         </motion.p>
 
         {/* Nombres con máxima legibilidad y jerarquía (Mucho espacio en blanco) */}
-        <motion.h1 variants={itemVariants} className="font-serif text-4xl sm:text-7xl md:text-[7rem] text-[#2F3E46] font-extralight tracking-tight leading-tight mb-8 sm:mb-12 flex flex-col items-center gap-1 sm:gap-4">
+        <motion.h1 variants={itemVariants} className="font-serif text-4xl sm:text-7xl md:text-[7rem] text-[#2F3E46] font-extralight tracking-tight leading-tight mb-6 sm:mb-8 flex flex-col items-center gap-1 sm:gap-4">
           <span>{groom.name}</span>
           <span className="text-2xl sm:text-5xl md:text-6xl italic text-[#A88B5E] font-serif">&</span>
           <span>{bride.name}</span>
         </motion.h1>
+
+        {/* Fecha Principal Integrada */}
+        <motion.div variants={itemVariants} className="mb-10 sm:mb-12 flex flex-col items-center">
+          <p className="font-sans text-[#A88B5E] tracking-[0.3em] sm:tracking-[0.5em] text-xs sm:text-sm uppercase font-semibold">
+            {date.split('-')[2]} DE {['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'][parseInt(date.split('-')[1]) - 1]} DE {date.split('-')[0]}
+          </p>
+        </motion.div>
 
         {/* Separador minimalista */}
         <div className="flex items-center space-x-6 w-full justify-center max-w-[200px] mx-auto mb-10 overflow-hidden">
@@ -74,13 +81,6 @@ const Hero = () => {
         <motion.p variants={itemVariants} className="font-serif text-[#768285] max-w-md mx-auto text-sm sm:text-base leading-relaxed tracking-wide italic px-4">
            "{intro}"
         </motion.p>
-
-        {/* Fecha Elegante */}
-        <motion.div variants={itemVariants} className="mt-12 sm:mt-16">
-          <p className="font-sans font-light text-[#2F3E46] tracking-[0.3em] text-xs sm:text-sm uppercase">
-            {date.split('-')[2]} . {date.split('-')[1]} . {date.split('-')[0]}
-          </p>
-        </motion.div>
       </motion.div>
 
       {/* Boxed Scroll Indicator */}
