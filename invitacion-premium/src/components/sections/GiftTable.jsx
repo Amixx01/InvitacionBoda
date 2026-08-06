@@ -22,7 +22,7 @@ const GiftTable = () => {
           "{gifts.message}"
         </p>
 
-        <div className="w-full flex flex-col space-y-12">
+        <div className="w-full flex flex-col space-y-8 mt-2">
           {/* Opciones de Tiendas */}
           <div className="flex flex-col space-y-4 items-center w-full">
             {gifts.stores.map((store, idx) => (
@@ -39,8 +39,6 @@ const GiftTable = () => {
               </motion.a>
             ))}
           </div>
-
-          <div className="w-[1px] h-12 bg-[#DCD5C6] mx-auto"></div>
 
           {/* Información Bancaria */}
           <div className="flex flex-col items-center">
