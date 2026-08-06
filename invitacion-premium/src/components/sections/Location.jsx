@@ -18,21 +18,19 @@ const EventCard = ({ event, index }) => (
     <p className="font-sans font-light text-sm text-[#768285] mb-8 max-w-[250px] leading-relaxed">{event.address}</p>
     
     {/* Miniatura del mapa incrustada */}
-    {event.coordinates && (
-      <div className="w-full h-48 sm:h-56 mb-8 rounded-lg overflow-hidden border border-[#A88B5E]/20 shadow-inner relative group bg-[#DCD5C6]/30">
-        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500 pointer-events-none z-10"></div>
-        <iframe
-          src={`https://maps.google.com/maps?q=${event.coordinates.lat},${event.coordinates.lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="grayscale-[30%] opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-        ></iframe>
-      </div>
-    )}
+    <div className="w-full h-48 sm:h-56 mb-8 rounded-lg overflow-hidden border border-[#A88B5E]/20 shadow-inner relative group bg-[#DCD5C6]/30">
+      <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500 pointer-events-none z-10"></div>
+      <iframe
+        src={`https://maps.google.com/maps?q=${encodeURIComponent(event.locationName + ', Yucatan')}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="grayscale-[30%] opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+      ></iframe>
+    </div>
 
     <motion.a 
       whileHover={{ scale: 1.05 }} 
