@@ -98,48 +98,42 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
   );
 
   return (
-    <>
-      {/* ─── OVERLAY FULLSCREEN CARTA (Para todos los dispositivos) ─── */}
-      <AnimatePresence>
-        {isZoomed && (
-          <motion.div
-            key="letter-overlay"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[200] bg-[#FAF9F6] flex flex-col items-center justify-center overflow-y-auto"
-          >
-            {/* Bordes decorativos interiores */}
-            <div className="absolute inset-4 border-[0.5px] border-[#A88B5E]/20 pointer-events-none min-h-[90%]" />
-            <div className="absolute inset-7 border-[0.5px] border-[#A88B5E]/10 pointer-events-none min-h-[85%]" />
-            <div className="w-full max-w-2xl mx-auto my-auto py-12">
-              <ZoomedContent />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* ─── LA CARTA DENTRO DEL SOBRE (Se desvanece cuando hacemos zoom) ─── */}
-      <div className="absolute inset-x-2 sm:inset-x-8 bottom-4 top-2 flex flex-col z-20" style={{ perspective: '1200px' }}>
-        <motion.div
-          className="relative bg-[#FAF9F6] w-full flex flex-col items-center justify-center overflow-hidden shrink-0"
-          initial={{ height: '95%' }}
-          style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}
-          animate={{
-            y: isOpen ? -80 : 0,
-            scale: 1,
+    <div className="absolute inset-x-2 sm:inset-x-8 bottom-4 top-2 flex flex-col z-20" style={{ perspective: '1200px' }}>
+      <motion.div
+        className="relative bg-[#FAF9F6] flex flex-col items-center justify-center overflow-hidden shrink-0"
+        initial={{ width: '100%', height: '95%', x: '0%', y: '0%' }}
+        style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}
+        animate={isZoomed
+          ? {
+            // El truco definitivo: La hacemos físicamente más ancha y alta, además de escalarla.
+            // Para mantener la carta central, el x y el y contrarrestan el crecimiento extra.
+            width: '130%', 
+            height: '190%',
+            x: '-15%', 
+            y: '-35%',
+            scale: scaleFactor * 0.95,
+            zIndex: 50,
+            boxShadow: '0 32px 80px -12px rgba(0,0,0,0.5)',
+          }
+          : {
+            // Estado original dentro del sobre
+            width: '100%',
             height: '95%',
-            opacity: isZoomed ? 0 : 1, // Se oculta totalmente al hacer zoom porque el overlay toma el control
+            x: '0%',
+            y: isOpen ? '-25%' : '0%', // Sale un poco al abrir el sobre
+            scale: 1,
             zIndex: 20,
-          }}
-          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-        >
-          {/* Bordes decorativos */}
-          <div className="absolute inset-[6px] border-[0.5px] border-[#A88B5E]/25 pointer-events-none" />
-          <div className="absolute inset-[12px] border-[0.5px] border-[#A88B5E]/10 pointer-events-none" />
+            boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
+          }
+        }
+        transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* Bordes decorativos */}
+        <div className="absolute inset-[6px] sm:inset-[8px] border-[0.5px] border-[#A88B5E]/25 pointer-events-none" />
+        <div className="absolute inset-[12px] sm:inset-[16px] border-[0.5px] border-[#A88B5E]/10 pointer-events-none" />
 
-          {/* Portada (nombre del invitado, visible tras abrir el sobre pero antes del zoom) */}
+        {/* Portada (nombre del invitado, visible tras abrir el sobre pero antes del zoom) */}
+        {!isZoomed && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: isOpen ? 1 : 0 }}
@@ -162,9 +156,16 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
             </span>
             <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mt-4" />
           </motion.div>
-        </motion.div>
-      </div>
-    </>
+        )}
+
+        {/* Contenido principal cuando está extraída (ZoomedContent) */}
+        <AnimatePresence>
+          {isZoomed && (
+            <ZoomedContent />
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </div>
   );
 };
 
