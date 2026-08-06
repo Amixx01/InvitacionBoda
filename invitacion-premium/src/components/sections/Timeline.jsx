@@ -19,7 +19,6 @@ const MilestoneItem = ({ milestone, index }) => {
       style={{ opacity: opacityVal, y: yVal }}
       className="flex flex-col items-center w-full text-center"
     >
-      <span className="font-sans text-[#A88B5E] tracking-[0.3em] text-xs uppercase mb-4 drop-shadow-sm">{milestone.date}</span>
       <h3 className="font-serif text-2xl sm:text-4xl text-[#2F3E46] mb-8">{milestone.title}</h3>
       <motion.div 
          style={{ scale: scaleVal }}
