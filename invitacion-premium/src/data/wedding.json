@@ -14,9 +14,9 @@
   },
   "event": {
     "date": "2026-08-28",
-    "time": "20:00",
+    "time": "8:00 PM",
     "countdownDate": "2026-08-28T20:00:00.000Z",
-    "timezone": "America/Mexico_City"
+    "timezone": "America/Merida"
   },
   "story": {
     "title": "Nuestra Historia",
@@ -66,7 +66,7 @@
     "type": "Ceremonia",
     "locationName": "Quinta Santa Isabel Uman",
     "address": "Ver ubicación en el mapa",
-    "time": "20:00 hrs",
+    "time": "8:00 PM",
     "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
     "coordinates": {
       "lat": 20.88,
@@ -76,7 +76,7 @@
   "reception": {
     "locationName": "Quinta Santa Isabel Uman",
     "address": "Ver ubicación en el mapa",
-    "time": "20:30 hrs",
+    "time": "8:30 PM",
     "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
     "coordinates": {
       "lat": 20.88,
