@@ -106,12 +106,12 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
         animate={isZoomed
           ? {
             // El truco definitivo: La hacemos físicamente más ancha y alta, además de escalarla.
-            // Para mantener la carta central, el x y el y contrarrestan el crecimiento extra.
-            width: '130%', 
-            height: '190%',
-            x: '-15%', 
-            y: '-35%',
-            scale: scaleFactor * 0.95,
+            // Para móvil, crecemos su altura mucho más agresivamente para que el texto respire.
+            width: isMobile ? '145%' : '130%', 
+            height: isMobile ? '230%' : '190%',
+            x: isMobile ? '-22.5%' : '-15%', 
+            y: isMobile ? '-60%' : '-35%',
+            scale: isMobile ? (scaleFactor * 0.85) : (scaleFactor * 0.95),
             zIndex: 50,
             boxShadow: '0 32px 80px -12px rgba(0,0,0,0.5)',
           }
