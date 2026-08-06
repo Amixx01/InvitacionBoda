@@ -106,11 +106,13 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
         animate={isZoomed
           ? {
             // El truco definitivo: La hacemos físicamente más ancha y alta, además de escalarla.
-            // Para móvil, crecemos su altura mucho más agresivamente para que el texto respire.
+            // Para encontrar el centro exacto, transform(x, y) en framer son relativos al tamaño FINAL.
+            // width 130% -> creció 30% -> desplazamos -15% relativo al padre -> -15/130 = -11.5% propio.
+            // height 190% (desde 95%) -> creció 95% -> desplazamos -47.5% del padre -> -47.5/190 = -25% propio.
             width: isMobile ? '145%' : '130%', 
             height: isMobile ? '230%' : '190%',
-            x: isMobile ? '-22.5%' : '-15%', 
-            y: isMobile ? '-60%' : '-35%',
+            x: isMobile ? '-15.5%' : '-11.5%', 
+            y: isMobile ? '-28%' : '-24%',
             scale: isMobile ? (scaleFactor * 0.85) : (scaleFactor * 0.95),
             zIndex: 50,
             boxShadow: '0 32px 80px -12px rgba(0,0,0,0.5)',
