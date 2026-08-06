@@ -40,27 +40,27 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.9, delay: 0.8 }}
-      className="flex flex-col items-center justify-center w-full h-full px-6 sm:px-10 py-4 sm:py-8"
+      className="flex flex-col items-center justify-center w-full h-full px-6 sm:px-10 py-4 sm:py-3"
     >
       <motion.span
         custom={0.9} variants={contentVariants} initial="hidden" animate="show"
-        className="font-sans text-[#A88B5E] text-[9px] sm:text-[10px] tracking-[0.4em] uppercase opacity-80 text-center mb-3 sm:mb-4 leading-loose"
+        className="font-sans text-[#A88B5E] text-[9px] sm:text-[10px] tracking-[0.4em] uppercase opacity-80 text-center mb-3 sm:mb-2 leading-loose"
       >
         Tenemos el honor de invitarte<br />a celebrar nuestra boda
       </motion.span>
 
-      <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mb-3 sm:mb-5" />
+      <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mb-3 sm:mb-3" />
 
       <motion.h2
         custom={1.05} variants={contentVariants} initial="hidden" animate="show"
-        className="font-serif text-[#2F3E46] text-center leading-tight text-xl sm:text-3xl"
+        className="font-serif text-[#2F3E46] text-center leading-tight text-xl sm:text-2xl"
       >
         {groom.name}
-        <span className="block text-[#A88B5E] italic font-light my-0.5 sm:my-1.5 text-base sm:text-xl">&</span>
+        <span className="block text-[#A88B5E] italic font-light my-0.5 sm:my-0.5 text-base sm:text-lg">&</span>
         {bride.name}
       </motion.h2>
 
-      <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mt-2 sm:mt-4 mb-3 sm:mb-5" />
+      <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mt-2 sm:mt-2 mb-3 sm:mb-3" />
 
       <motion.p
         custom={1.2} variants={contentVariants} initial="hidden" animate="show"
@@ -73,12 +73,12 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
         <motion.div
           initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.6 }}
-          className="mt-7 sm:mt-6 px-5 sm:px-6 py-2 sm:py-2.5 border border-[#A88B5E]/35 bg-[#A88B5E]/5 flex items-center gap-3"
+          className="mt-7 sm:mt-4 px-5 sm:px-6 py-2 sm:py-2 border border-[#A88B5E]/35 bg-[#A88B5E]/5 flex items-center gap-3"
         >
           <span className="font-sans text-[#7a6a4f] text-[9px] sm:text-[10px] tracking-[0.2em] uppercase">
             Pases Reservados:
           </span>
-          <span className="font-serif text-[#A88B5E] text-base sm:text-lg font-semibold leading-none">
+          <span className="font-serif text-[#A88B5E] text-base sm:text-base font-semibold leading-none">
             {guest.pases}
           </span>
         </motion.div>
@@ -90,7 +90,7 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
         whileHover={{ scale: 1.04, backgroundColor: '#A88B5E', color: '#fff' }}
         whileTap={{ scale: 0.97 }}
         onClick={(e) => { e.stopPropagation(); onContinue(); }}
-        className="mt-5 sm:mt-8 px-10 py-2.5 sm:py-3 border border-[#A88B5E] text-[#A88B5E] font-sans text-[9px] tracking-[0.3em] uppercase transition-all duration-300 bg-transparent cursor-pointer"
+        className="mt-5 sm:mt-4 px-10 py-2.5 sm:py-2.5 border border-[#A88B5E] text-[#A88B5E] font-sans text-[9px] tracking-[0.3em] uppercase transition-all duration-300 bg-transparent cursor-pointer"
       >
         Abrir Invitación
       </motion.button>
