@@ -88,7 +88,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-24 sm:bottom-8 left-1/2 -translate-x-1/2 z-20"
       >
         <ScrollIndicator />
       </motion.div>
