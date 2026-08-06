@@ -11,7 +11,6 @@ const Hero = lazy(() => import('./components/sections/Hero'))
 const Countdown = lazy(() => import('./components/sections/Countdown'))
 const Story = lazy(() => import('./components/sections/Story'))
 const Location = lazy(() => import('./components/sections/Location'))
-const Schedule = lazy(() => import('./components/sections/Schedule'))
 const DressCode = lazy(() => import('./components/sections/DressCode'))
 const GiftTable = lazy(() => import('./components/sections/GiftTable'))
 const RSVP = lazy(() => import('./components/sections/RSVP'))
@@ -58,7 +57,6 @@ function WeddingApp() {
           <Countdown />
           <Story />
           <Location />
-          <Schedule />
           <DressCode />
           <GiftTable />
           <RSVP />
