@@ -121,12 +121,15 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
       {/* ─── LA CARTA DENTRO DEL SOBRE (visible siempre en PC, y en móvil hasta hacer zoom) ─── */}
       <div className="absolute inset-x-2 sm:inset-x-8 bottom-4 top-2 flex flex-col z-20" style={{ perspective: '1200px' }}>
         <motion.div
-          className="relative bg-[#FAF9F6] w-full h-[95%] flex flex-col items-center justify-center overflow-hidden"
+          className="relative bg-[#FAF9F6] w-full flex flex-col items-center justify-center overflow-hidden"
+          initial={{ height: '95%' }}
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}
           animate={isZoomed
             ? {
-              // En PC: zoom clásico. En móvil: se oculta (el overlay lo reemplaza)
-              scale: isMobile ? 1 : scaleFactor,
+              // En PC: animamos la altura al doble para hacerlo vertical, compensando escala.
+              scale: isMobile ? 1 : (scaleFactor * 0.85),
+              height: isMobile ? '95%' : '150%',
+              y: isMobile ? 0 : '-20%',
               opacity: isMobile ? 0 : 1,
               zIndex: 50,
               boxShadow: '0 32px 80px -12px rgba(0,0,0,0.45)',
@@ -134,6 +137,7 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
             : {
               y: isOpen ? -80 : 0,
               scale: 1,
+              height: '95%',
               opacity: 1,
               zIndex: 20,
               boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
