@@ -82,7 +82,7 @@ const Countdown = () => {
            initial={{ opacity: 0, y: 10 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ delay: 0.8, duration: 1 }}
-           className="mt-16 sm:mt-20 flex flex-col items-center justify-center relative"
+           className="mt-8 sm:mt-10 flex flex-col items-center justify-center relative"
         >
           <div className="w-[1px] h-8 bg-[#A88B5E]/30 mb-6"></div>
           <span className="font-sans text-[#A88B5E] tracking-[0.3em] text-[9px] sm:text-xs uppercase mb-3">
