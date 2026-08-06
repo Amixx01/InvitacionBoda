@@ -18,7 +18,7 @@ const Envelope = ({ onContinue }) => {
       forcePlay();
       setTimeout(() => {
         setIsLetterZoomed(true);
-      }, 1800);
+      }, 3800);
     }
   };
 
