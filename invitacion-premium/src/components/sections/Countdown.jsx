@@ -63,8 +63,8 @@ const Countdown = () => {
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         className="flex flex-col items-center justify-center w-full max-w-4xl"
       >
-        <p className="font-serif text-[#2F3E46] tracking-[0.2em] text-xs sm:text-sm uppercase mb-12 sm:mb-16">
-          Esperamos este día con ansias
+        <p className="font-serif text-[#2F3E46] tracking-[0.2em] text-xs sm:text-sm uppercase mb-12 sm:mb-16 text-center">
+          Esperamos este gran día con ansias
         </p>
 
         <div className="flex items-center justify-center w-full max-w-3xl">
@@ -76,6 +76,22 @@ const Countdown = () => {
           <div className="text-[#A88B5E] text-2xl sm:text-4xl font-extralight opacity-30 mt-[-2rem] sm:mt-[-3rem]">:</div>
           <AnimatedNumber value={timeLeft.s} label="Segundos" />
         </div>
+
+        {/* Display de la Hora */}
+        <motion.div 
+           initial={{ opacity: 0, y: 10 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.8, duration: 1 }}
+           className="mt-16 sm:mt-20 flex flex-col items-center justify-center relative"
+        >
+          <div className="w-[1px] h-8 bg-[#A88B5E]/30 mb-6"></div>
+          <span className="font-sans text-[#A88B5E] tracking-[0.3em] text-[9px] sm:text-xs uppercase mb-3">
+            Daremos Inicio A Las
+          </span>
+          <p className="font-serif text-3xl sm:text-4xl text-[#2F3E46] font-light tracking-wide">
+            {data.event.time}
+          </p>
+        </motion.div>
       </motion.div>
     </section>
   );
