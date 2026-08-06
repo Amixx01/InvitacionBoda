@@ -1,52 +1,214 @@
 {
-  "jade-salamanca": { "nombre": "Jade Salamanca", "pases": 2 },
-  "diego-canche": { "nombre": "Diego Canche", "pases": 4 },
-  "guadalupe-canche": { "nombre": "Guadalupe Canche", "pases": 2 },
-  "ivan-tecua": { "nombre": "Iván Tecua", "pases": 3 },
-  "fatima": { "nombre": "Fátima", "pases": 5 },
-  "abuela-tecua": { "nombre": "Abuela Tecua", "pases": 2 },
-  "fernando-barbosa": { "nombre": "Fernando Barbosa", "pases": 2 },
-  "arturo-padrino": { "nombre": "Arturo Padrino", "pases": 4 },
-  "jaeil": { "nombre": "Jaeil", "pases": 4 },
-  "mili-lopez": { "nombre": "Mili López", "pases": 5 },
-  "richard-lopez": { "nombre": "Richard López", "pases": 2 },
-  "william-herrera": { "nombre": "William Herrera", "pases": 1 },
-  "wilberth-gamboa": { "nombre": "Wilberth Gamboa", "pases": 1 },
-  "iruth-samir": { "nombre": "Iruth Samir", "pases": 1 },
-  "samuel-jessie": { "nombre": "Samuel Jessie", "pases": 1 },
-  "ismael-chi": { "nombre": "Ismael Chi", "pases": 1 },
-  "de-la-gala": { "nombre": "De la Gala", "pases": 1 },
-  "daniel-avila": { "nombre": "Daniel Ávila", "pases": 1 },
-  "alex-mamado": { "nombre": "Alex Mamado", "pases": 2 },
-  "andres-bebo": { "nombre": "Andrés Bebo", "pases": 1 },
-  "marco-cardona": { "nombre": "Marco Cardona", "pases": 1 },
-  "alejandro-pech": { "nombre": "Alejandro Pech", "pases": 1 },
-  "adrian-keb": { "nombre": "Adrián Keb", "pases": 1 },
-  "bryan-ascencio": { "nombre": "Bryan Ascencio", "pases": 1 },
-  "edward-loco": { "nombre": "Edward el Loco", "pases": 1 },
-  "victor-victor": { "nombre": "Víctor Víctor", "pases": 1 },
-  "davis-salazar": { "nombre": "Davis Salazar", "pases": 1 },
-  "flavio-fabricio": { "nombre": "Flavio Fabricio", "pases": 1 },
-  "kevin-avala": { "nombre": "Kevin Avala", "pases": 1 },
-  "haziel-montejo": { "nombre": "Haziel Montejo", "pases": 2 },
-  "sofia-lopez": { "nombre": "Sofía López", "pases": 1 },
-  "isaac-shein": { "nombre": "Isaac Shein", "pases": 2 },
-  "josue-pool": { "nombre": "Josué Pool", "pases": 1 },
-  "manuel-burgos": { "nombre": "Manuel Burgos", "pases": 1 },
-  "karla-zapata": { "nombre": "Karla Zapata", "pases": 1 },
-  "pablo-montero": { "nombre": "Pablo Montero", "pases": 1 },
-  "arturo-arit": { "nombre": "Arturo Arit", "pases": 2 },
-  "luis-alberto-perera": { "nombre": "Luis Alberto Perera Ruelas", "pases": 3 },
-  "jorge-antonio-perera": { "nombre": "Jorge Antonio Perera Ruelas", "pases": 5 },
-  "norma-leticia-perera": { "nombre": "Norma Leticia Perera Ruelas", "pases": 5 },
-  "adda-rosa-uicab": { "nombre": "Adda Rosa Uicab Saenz", "pases": 3 },
-  "tere-cua": { "nombre": "Tere Cúa", "pases": 2 },
-  "landy-maribel-uicab": { "nombre": "Landy Maribel Uicab Saenz", "pases": 3 },
-  "marisela-martin": { "nombre": "Marisela Martín Estrella", "pases": 5 },
-  "fridda-pacheco": { "nombre": "Fridda Pacheco Ek", "pases": 3 },
-  "kenia-castro": { "nombre": "Kenia Castro", "pases": 3 },
-  "edwin-daniel-perera": { "nombre": "Edwin Daniel Perera Uicab", "pases": 2 },
-  "luis-rodrigo-perera": { "nombre": "Luis Rodrigo Perera Uicab", "pases": 3 },
-  "margarita-ley": { "nombre": "Margarita Ley", "pases": 1 },
-  "andrea-uc": { "nombre": "Andrea Uc Canul", "pases": 1 }
+  "jade-salamanca": {
+    "nombre": "Jade Salamanca",
+    "pases": 2
+  },
+  "diego-canche": {
+    "nombre": "Diego Canche",
+    "pases": 4
+  },
+  "guadalupe-canche": {
+    "nombre": "Guadalupe Canche",
+    "pases": 2
+  },
+  "ivan-tecua": {
+    "nombre": "Iván Tecua",
+    "pases": 3
+  },
+  "fatima-canche": {
+    "nombre": "Fátima Canche",
+    "pases": 5
+  },
+  "zoila-tecua": {
+    "nombre": "Zoila Tecua",
+    "pases": 2
+  },
+  "fernando-barbosa": {
+    "nombre": "Fernando Barbosa",
+    "pases": 2
+  },
+  "arturo-padrino": {
+    "nombre": "Arturo Padrino",
+    "pases": 4
+  },
+  "jaiel-ortiz": {
+    "nombre": "Jaiel Ortiz",
+    "pases": 4
+  },
+  "mili-lopez": {
+    "nombre": "Mili López",
+    "pases": 5
+  },
+  "richard-lopez": {
+    "nombre": "Richard López",
+    "pases": 2
+  },
+  "william-herrera": {
+    "nombre": "William Herrera",
+    "pases": 1
+  },
+  "wilberth-gamboa": {
+    "nombre": "Wilberth Gamboa",
+    "pases": 1
+  },
+  "iruth-samir": {
+    "nombre": "Iruth Samir",
+    "pases": 1
+  },
+  "samuel-jessie": {
+    "nombre": "Samuel Jessie",
+    "pases": 1
+  },
+  "ismael-chi": {
+    "nombre": "Ismael Chi",
+    "pases": 1
+  },
+  "de-la-gala": {
+    "nombre": "De la Gala",
+    "pases": 1
+  },
+  "daniel-avila": {
+    "nombre": "Daniel Ávila",
+    "pases": 1
+  },
+  "alex-mamado": {
+    "nombre": "Alex Mamado",
+    "pases": 2
+  },
+  "andres-bebo": {
+    "nombre": "Andrés Bebo",
+    "pases": 1
+  },
+  "marco-cardona": {
+    "nombre": "Marco Cardona",
+    "pases": 1
+  },
+  "alejandro-pech": {
+    "nombre": "Alejandro Pech",
+    "pases": 1
+  },
+  "adrian-keb": {
+    "nombre": "Adrián Keb",
+    "pases": 1
+  },
+  "bryan-ascencio": {
+    "nombre": "Bryan Ascencio",
+    "pases": 1
+  },
+  "edward-loco": {
+    "nombre": "Edward el Loco",
+    "pases": 1
+  },
+  "victor-victor": {
+    "nombre": "Víctor Víctor",
+    "pases": 1
+  },
+  "davis-salazar": {
+    "nombre": "Davis Salazar",
+    "pases": 1
+  },
+  "flavio-fabricio": {
+    "nombre": "Flavio Fabricio",
+    "pases": 1
+  },
+  "kevin-avala": {
+    "nombre": "Kevin Avala",
+    "pases": 1
+  },
+  "haziel-montejo": {
+    "nombre": "Haziel Montejo",
+    "pases": 2
+  },
+  "sofia-lopez": {
+    "nombre": "Sofía López",
+    "pases": 1
+  },
+  "isaac-shein": {
+    "nombre": "Isaac Shein",
+    "pases": 2
+  },
+  "josue-pool": {
+    "nombre": "Josué Pool",
+    "pases": 1
+  },
+  "manuel-burgos": {
+    "nombre": "Manuel Burgos",
+    "pases": 1
+  },
+  "karla-zapata": {
+    "nombre": "Karla Zapata",
+    "pases": 1
+  },
+  "pablo-montero": {
+    "nombre": "Pablo Montero",
+    "pases": 1
+  },
+  "arturo-arit": {
+    "nombre": "Arturo Arit",
+    "pases": 2
+  },
+  "luis-alberto-perera": {
+    "nombre": "Luis Alberto Perera Ruelas",
+    "pases": 3
+  },
+  "jorge-antonio-perera": {
+    "nombre": "Jorge Antonio Perera Ruelas",
+    "pases": 5
+  },
+  "norma-leticia-perera": {
+    "nombre": "Norma Leticia Perera Ruelas",
+    "pases": 5
+  },
+  "adda-rosa-uicab": {
+    "nombre": "Adda Rosa Uicab Saenz",
+    "pases": 3
+  },
+  "tere-cua": {
+    "nombre": "Tere Cúa",
+    "pases": 2
+  },
+  "landy-maribel-uicab": {
+    "nombre": "Landy Maribel Uicab Saenz",
+    "pases": 3
+  },
+  "marisela-martin": {
+    "nombre": "Marisela Martín Estrella",
+    "pases": 5
+  },
+  "fridda-pacheco": {
+    "nombre": "Fridda Pacheco Ek",
+    "pases": 3
+  },
+  "kenia-castro": {
+    "nombre": "Kenia Castro",
+    "pases": 3
+  },
+  "edwin-daniel-perera": {
+    "nombre": "Edwin Daniel Perera Uicab",
+    "pases": 2
+  },
+  "luis-rodrigo-perera": {
+    "nombre": "Luis Rodrigo Perera Uicab",
+    "pases": 3
+  },
+  "margarita-ley": {
+    "nombre": "Margarita Ley",
+    "pases": 1
+  },
+  "andrea-uc": {
+    "nombre": "Andrea Uc Canul",
+    "pases": 1
+  },
+  "ligia-cano": {
+    "nombre": "Ligia Cano",
+    "pases": 1
+  },
+  "wendi-canche": {
+    "nombre": "Wendi Canche",
+    "pases": 2
+  },
+  "valny-duran": {
+    "nombre": "Valny Duran",
+    "pases": 4
+  }
 }
