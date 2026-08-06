@@ -99,50 +99,40 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
 
   return (
     <>
-      {/* ─── SOLO MÓVIL: Overlay fullscreen cuando se hace zoom ─── */}
+      {/* ─── OVERLAY FULLSCREEN CARTA (Para todos los dispositivos) ─── */}
       <AnimatePresence>
-        {isZoomed && isMobile && (
+        {isZoomed && (
           <motion.div
-            key="mobile-letter-overlay"
+            key="letter-overlay"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[200] bg-[#FAF9F6] flex flex-col items-center justify-center"
+            className="fixed inset-0 z-[200] bg-[#FAF9F6] flex flex-col items-center justify-center overflow-y-auto"
           >
             {/* Bordes decorativos interiores */}
-            <div className="absolute inset-4 border-[0.5px] border-[#A88B5E]/20 pointer-events-none" />
-            <div className="absolute inset-7 border-[0.5px] border-[#A88B5E]/10 pointer-events-none" />
-            <ZoomedContent />
+            <div className="absolute inset-4 border-[0.5px] border-[#A88B5E]/20 pointer-events-none min-h-[90%]" />
+            <div className="absolute inset-7 border-[0.5px] border-[#A88B5E]/10 pointer-events-none min-h-[85%]" />
+            <div className="w-full max-w-2xl mx-auto my-auto py-12">
+              <ZoomedContent />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* ─── LA CARTA DENTRO DEL SOBRE (visible siempre en PC, y en móvil hasta hacer zoom) ─── */}
+      {/* ─── LA CARTA DENTRO DEL SOBRE (Se desvanece cuando hacemos zoom) ─── */}
       <div className="absolute inset-x-2 sm:inset-x-8 bottom-4 top-2 flex flex-col z-20" style={{ perspective: '1200px' }}>
         <motion.div
-          className="relative bg-[#FAF9F6] w-full flex flex-col items-center justify-center overflow-hidden"
+          className="relative bg-[#FAF9F6] w-full flex flex-col items-center justify-center overflow-hidden shrink-0"
           initial={{ height: '95%' }}
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}
-          animate={isZoomed
-            ? {
-              // En PC: animamos la altura al doble para hacerlo vertical, compensando escala.
-              scale: isMobile ? 1 : (scaleFactor * 0.85),
-              height: isMobile ? '95%' : '150%',
-              y: isMobile ? 0 : '-20%',
-              opacity: isMobile ? 0 : 1,
-              zIndex: 50,
-              boxShadow: '0 32px 80px -12px rgba(0,0,0,0.45)',
-            }
-            : {
-              y: isOpen ? -80 : 0,
-              scale: 1,
-              height: '95%',
-              opacity: 1,
-              zIndex: 20,
-              boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
-            }
-          }
+          animate={{
+            y: isOpen ? -80 : 0,
+            scale: 1,
+            height: '95%',
+            opacity: isZoomed ? 0 : 1, // Se oculta totalmente al hacer zoom porque el overlay toma el control
+            zIndex: 20,
+          }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Bordes decorativos */}
@@ -150,37 +140,28 @@ const Letter = ({ isOpen, isZoomed, onContinue }) => {
           <div className="absolute inset-[12px] border-[0.5px] border-[#A88B5E]/10 pointer-events-none" />
 
           {/* Portada (nombre del invitado, visible tras abrir el sobre pero antes del zoom) */}
-          {!isZoomed && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isOpen ? 1 : 0 }}
-              transition={{ duration: 0.7, delay: isOpen ? 0.6 : 0 }}
-              className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-8 text-center"
-            >
-              <span className="font-sans text-[#A88B5E] text-[7px] sm:text-[9px] tracking-[0.5em] uppercase mb-4 opacity-80">
-                ¡Nuestra Boda!
-              </span>
-              <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mb-4" />
-              <span className="font-serif text-[#2F3E46] tracking-wide">
-                {guest ? (
-                  <span className="flex flex-col items-center gap-1">
-                    <span className="text-lg sm:text-xl font-light">{guest.nombre}</span>
-                    <span className="text-sm sm:text-base text-[#768285] font-light italic">Están Invitados</span>
-                  </span>
-                ) : (
-                  <span className="text-lg sm:text-xl font-light">Estás Invitado</span>
-                )}
-              </span>
-              <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mt-4" />
-            </motion.div>
-          )}
-
-          {/* Contenido del zoom (solo en PC, porque en móvil lo muestra el overlay) */}
-          <AnimatePresence>
-            {isZoomed && !isMobile && (
-              <ZoomedContent />
-            )}
-          </AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isOpen ? 1 : 0 }}
+            transition={{ duration: 0.7, delay: isOpen ? 0.6 : 0 }}
+            className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-8 text-center"
+          >
+            <span className="font-sans text-[#A88B5E] text-[7px] sm:text-[9px] tracking-[0.5em] uppercase mb-4 opacity-80">
+              ¡Nuestra Boda!
+            </span>
+            <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mb-4" />
+            <span className="font-serif text-[#2F3E46] tracking-wide">
+              {guest ? (
+                <span className="flex flex-col items-center gap-1">
+                  <span className="text-lg sm:text-xl font-light">{guest.nombre}</span>
+                  <span className="text-sm sm:text-base text-[#768285] font-light italic">Están Invitados</span>
+                </span>
+              ) : (
+                <span className="text-lg sm:text-xl font-light">Estás Invitado</span>
+              )}
+            </span>
+            <div className="w-12 h-[0.5px] bg-[#A88B5E]/40 mt-4" />
+          </motion.div>
         </motion.div>
       </div>
     </>
