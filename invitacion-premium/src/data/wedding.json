@@ -67,20 +67,20 @@
     "locationName": "Quinta Santa Isabel Uman",
     "address": "Ver ubicación en el mapa",
     "time": "8:00 PM",
-    "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
+    "googleMapsUrl": "https://maps.app.goo.gl/7TK8GJTwWCWHmXUd8",
     "coordinates": {
-      "lat": 20.88,
-      "lng": -89.74
+      "lat": 20.8876402,
+      "lng": -89.7402096
     }
   },
   "reception": {
     "locationName": "Quinta Santa Isabel Uman",
     "address": "Ver ubicación en el mapa",
     "time": "8:30 PM",
-    "googleMapsUrl": "https://maps.app.goo.gl/LEohsRCMdBA1BUNQ9?g_st=aw",
+    "googleMapsUrl": "https://maps.app.goo.gl/7TK8GJTwWCWHmXUd8",
     "coordinates": {
-      "lat": 20.88,
-      "lng": -89.74
+      "lat": 20.8876402,
+      "lng": -89.7402096
     }
   },
   "schedule": [
